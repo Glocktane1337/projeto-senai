@@ -21,43 +21,39 @@ var inscritos_max = 100
 
 var idade_minima = 18
 
-//declara as variáveis de confirmação como falsas por padrão.
+//Todas variáveis declaradas anteriormente.
 
 if (data_evento > data_atual) {
-    var dia_ok = true 
-    if (dia_ok = true) {
-        var idade_usuario = window.prompt("Qual é a sua idade?")
-
-            if (idade_usuario >= idade_minima) {
-                idade_ok = true
-                idade_data_certas = true }  
-                 else {
-                        alert("Idade inválida!")
-                        idade_data_certas = false}   
-                            if (idade_data_certas = true) {    
-                                alert("Idade e data de inscrição válidas!");
-                                alert("Verificando base de dados para cadastros anteriores...")} 
-                                    else {
-                                        alert("Cadastro inválido.")}              
-                                                                //A esse ponto, o script iria procurar na database a quantidade de inscrições anteriores,
-                                                                //mas como não sei esse comando, vou considerar 50 participantes já inscritos.
-                        if (inscritos_anteriores < inscritos_max ) {
-                            alert("Inscrição feita com sucesso!")
-                            alert("O evento será dia 22 de Setembro, não falte!")}
-                                else {
-                                    alert("Cadastro invalidado, quantidade limite de participantes já atingida.")
+    dia_ok = true
+        if (dia_ok = true) {
+            var idade_usuario = window.prompt("Qual é a sua idade?")
+                if (idade_usuario >= idade_minima) { 
+                    idade_ok = true
+                    idade_data_certas = true   
+                        if (idade_data_certas = true) {
+                            alert("Idade e data de inscrição válidas!");
+                            alert("Verificando base de dados para cadastros anteriores...")
+                            //A esse ponto, o script iria procurar na database a quantidade de inscrições anteriores,
+                            //mas como não sei esse comando, vou considerar 50 participantes já inscritos.
+                                if (inscritos_anteriores < inscritos_max) {
+                                    alert("Inscrição feita com sucesso!")
+                                    alert("O evento será dia 22 de Setembro, não falte!")}
+                                        else{
+                                            alert("Cadastro invalidado, quantidade limite de participantes já atingida.")}
+                                        }
+                                    
                                 }
-                            }
-                              
-}
-else {
-    alert("Data inválida!")
-    idade_data_certas = false }
+                                else {
+                                    alert("Idade inválida!")
+                                    idade_data_certas = false} 
+                        }
 
 
+                }
+                else {
+                    alert("Data inválida!")
+                    idade_data_certas = false}
+        
 //ninho de if/elses verificando a conformância da idade e da data,
-//encerra o script caso alguma delas não esteja confrome.
-
- 
-
+//encerra o script caso alguma delas não esteja conforme.
 
